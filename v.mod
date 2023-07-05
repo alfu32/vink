@@ -7,5 +7,5 @@ Module {
     tags: ['tui','react','terminal','user','interface']
 	version: '0.1.0'
 	license: 'MIT'
-	dependencies: []
+	dependencies: ['walkingdevel.vxml','term','term.tui']
 }
