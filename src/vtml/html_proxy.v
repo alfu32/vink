@@ -102,14 +102,6 @@ fn (this HtmlProxy) box() Box {
 	}
 }
 
-pub fn to_color(u u32) ui.Color {
-	return ui.Color{
-		r: u8((u & 0xff0000) >> 4)
-		g: u8(u & 0x00ff00) >> 2
-		b: u8(u & 0x0000ff)
-	}
-}
-
 pub fn (this HtmlProxy) render_at(mut ctx ui.Context, refx i32, refy i32) {
 	bx := this.box()
 	ctx.set_bg_color(to_color((this.node.attributes['bg_color'] or { '0' }).u32()))
