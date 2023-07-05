@@ -1,10 +1,10 @@
 module vtml
 
-import vxml
 import arrays
 import term.ui
 import strconv
 import regex
+import walkingdevel.vxml
 
 pub struct HtmlProxy {
 pub mut:

@@ -6,7 +6,6 @@ import term
 import os
 import term.ui
 import vtml
-import vxml
 
 fn main2() {
 	term.clear() // clears the content in the terminal
