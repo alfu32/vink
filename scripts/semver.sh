@@ -6,6 +6,7 @@ export SEMVER_MAJOR=1
 export SEMVER_MINOR=0
 export SEMVER_PATCH=0
 
+
 for commit_title in `git log --all | tac | egrep -oh "(feat|feature|refactoring|refactor|fix|hotfix|config)\(.*?\)"`;do
     #echo $commit_title
     commit_type="$(egrep -oh "^(milestone|feat|feature|refactoring|refactor|fix|hotfix|config)" <<< $commit_title)"
@@ -36,7 +37,7 @@ for commit_title in `git log --all | tac | egrep -oh "(feat|feature|refactoring|
         SEMVER_PATCH=0
     fi
     SEMVER=$SEMVER_MAJOR.$SEMVER_MINOR.$SEMVER_PATCH
-    
+
 done
 export SEMVER="$SEMVER_MAJOR.$SEMVER_MINOR.$SEMVER_PATCH"
 git tag "$SEMVER"
